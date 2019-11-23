@@ -49,11 +49,15 @@ def cut_rod(prices, length):
     At every iteration of l we will iterate a 
     variable called cut which is the the size of the cut
     we wish to make to our rod.
-    If memo[l-cut] + prices[cut] > memo[l] meanning
-    if the profit we get from the part we cut off plus
+    
+    if memo[l-cut] + prices[cut] > memo[l]:
+        memo[l] =  memo[l-cut] + prices[cut]
+    
+    meaning if the profit we get 
+    from the part we cut off plus
     the maximum profit we get from a rod of size l-cut is greater than
     the current maximum profit we found at l we update memo[l] to the 
-    new optimal profit.
+    new maximum profit.
     """
     for l in range(1,length+1):
         for cut in range(1,l+1):
@@ -74,7 +78,6 @@ def print_rod_cut(solution):
 	how big the cut was made for a rod of length i-cut to get
 	the maximum profit.
 	... You can see how this is becoming recursive.
-
 	
 	If we keep appending the size of the cuts that were made
 	as strings of "#" to a list until i-cut equals 0, then
