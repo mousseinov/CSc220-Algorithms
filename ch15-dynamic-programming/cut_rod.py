@@ -62,8 +62,8 @@ def cut_rod(prices, length):
     for l in range(1,length+1):
         for cut in range(1,l+1):
             if memo[l-cut] + prices[cut] > memo[l]:
-                memo[l] =  memo[l-cut] + prices[cut] # update memo to the new optimal profit found
-                save_solution[l] = cut # At a rod of length l the optimal cost 
+                memo[l] =  memo[l-cut] + prices[cut] # update memo to the new optimal profit found.
+                save_solution[l] = cut # the optimal cut found so far for a rod of length l.
     return memo[length], save_solution
 
 
