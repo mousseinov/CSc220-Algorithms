@@ -112,7 +112,7 @@ def main():
 	# We get the profit and solution of where cut the rode
 	optimal_profit, solution = cut_rod(prices, length)
 
-	print("length of rode = {l}\nprices={p}".format(l=length, p=prices))
+	print("length of rod = {l}\nprices={p}".format(l=length, p=prices))
 	
 	# Dont worry about this printing: its just to print the dashes nicely
 	string_above = "prices = {p}".format(p=prices)
