@@ -121,7 +121,7 @@ def main():
 	
 
 	# Print the solution
-	print("Optimal profit: ${profit}".format(profit=optimal_profit))
+	print("Maximum Profit: ${profit}".format(profit=optimal_profit))
 	print("How the rod is cut up:")
 	print_rod_cut(solution)
 
