@@ -36,8 +36,8 @@ def cut_rod(prices, length):
 
     """
     This is a list to store where the optimal cut 
-    to get the maximum profit was
-    made so we can rebuild our solution if we wish to.
+    was made to get the maximum profit, 
+    so we can rebuild our solution if we wish to.
     """
     save_solution = [0 for _ in range(length+1)]
 
@@ -45,7 +45,7 @@ def cut_rod(prices, length):
     """
     We will iterate a variable l from 1 to length.
     memo[l] will represent the maximum profit we 
-    can make off a rod of size l by cutting it up or not cutting it all.
+    can make off of a rod of size l by cutting it up or not cutting it all.
     At every iteration of l we will iterate a 
     variable called cut which is the the size of the cut
     we wish to make to our rod.
@@ -55,7 +55,7 @@ def cut_rod(prices, length):
     
     meaning if the profit we get 
     from the part we cut off plus
-    the maximum profit we get from a rod of size l-cut is greater than
+    the maximum profit we can get from a rod of size l-cut is greater than
     the current maximum profit we found at l we update memo[l] to the 
     new maximum profit.
     """
